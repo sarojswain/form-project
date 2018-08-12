@@ -1,0 +1,45 @@
+input.ng-invalid.ng-touched{
+
+	border: 1px solid red;
+}
+
+.second-column{
+    background-color:#FFFFFF;
+    height: 600px;
+    width: 560px;
+    margin-top: 30px;
+      
+} 
+#form{
+    margin-top: 30px;
+}
+.div-one {
+    width: 70%;
+    margin-left: 70px;
+}
+.div-two{
+    width: 70%;
+    margin-left: 70px;
+}
+.div-three {
+    width: 70%;
+    margin-left: 70px;
+}
+.div-four{
+    width: 70%;
+    margin-left: 70px;
+}
+.contact-form{
+    margin-left: 180px;
+    margin-top: 60px;
+
+}
+.button{
+    width: 100px;
+    border-radius: 25px;
+    margin-left: 70px;
+}
+.cancel-button{
+    width: 100px;
+    border-radius: 25px;
+}

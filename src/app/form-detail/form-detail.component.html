@@ -1,0 +1,82 @@
+
+<div class="container" *ngIf = '!onUserAdded'>
+    <div class="row">
+        <div class= 'col-sm-3'></div>
+
+        <div class="col-sm-6 second-column">
+            <h2 class="contact-form">Contact Form</h2>
+            <form (ngSubmit) = 'onSubmit(f)' #f= ngForm id="form">
+                <div class="form-group div-one">
+                  <label for="firstname">First Name</label>
+                  <input type="text" class="form-control" id="firstname" name="firstname" ngModel required>
+                </div>
+                
+                <div class="form-group div-two">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" ngModel required>
+                  </div>
+        
+                  <div class="form-group div-three">
+                      <label for="location">Location</label>
+                      <select class="form-control" id="location" name="location" ngModel required>
+                          <option>Please select your location</option>
+                          <option>Dartmoor</option>
+                          <option>Yellow Stone</option>
+                          <option>Kajiranga</option>
+                          <option>Kakudu</option>
+                        </select>
+        
+                    </div>
+        
+                    <div class="form-group div-four">
+                        <label for="experience">Experience</label>
+                        <select class="form-control" id="experience" name="experience" ngModel required>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                          </select>
+                      </div>
+                      <br>
+                      <button type="submit" 
+                              class="btn btn-primary button"
+                              [disabled] = '! f.valid'>Add</button>
+                      <button type="button" class="btn btn-danger cancel-button">Cancel</button>
+              </form>
+        </div>
+
+        <div class= 'col-sm-3'></div>
+     </div>
+</div>
+
+<div class="container" *ngIf = 'onUserAdded'>
+    <div class="row">
+       <h2 style="text-align: center">Preview Page</h2> 
+       <br>  
+           <table class="table">
+             <thead>
+               <tr>
+                 <th>Firstname</th>
+                 <th>Lastname</th>
+                 <th>Location</th>
+                 <th>Experience</th>
+               </tr>
+             </thead>
+           <tbody>
+             <tr>
+               <td>{{ firstName }}</td>
+               <td>{{ lastName }}</td>
+               <td>{{ location }}</td>
+               <td>{{ exp }}</td>
+             </tr>      
+           </tbody>
+         </table>
+    </div>
+  </div>
+  
